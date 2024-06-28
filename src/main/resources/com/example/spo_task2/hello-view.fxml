@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.text.TextFlow?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.spo_task2.HelloController">
+    <children>
+        <SplitPane dividerPositions="0.5" prefHeight="300.0" prefWidth="600.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                    <TextArea fx:id="inputTextArea" layoutX="6.0" layoutY="37.0" prefHeight="256.0" prefWidth="290.0" text="Начало&#10;Первое б123, в12&#10;Второе 32 54 21&#10;345, 12, 65 Конец слагаемого&#10;1: б123 = 56/3*60&#10;Конец" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="108.0" layoutY="1.0" prefHeight="36.0" prefWidth="80.0" text="Input">
+                            <font>
+                                <Font size="25.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="342.0" prefWidth="296.0">
+                    <children>
+                        <TextArea editable="false" layoutY="37.0" prefHeight="256.0" prefWidth="290.0" text="Язык = &quot;Начало&quot; Множество ... Множество Слагаемое Опер ... Опер &quot;Конец&quot;&#10;Множество = &quot;Первое&quot; перем &quot;,&quot; ... перем ! &quot;Второе&quot; цел ... цел&#10;Слагаемое = цел &quot;,&quot; ... цел &quot;Конец слагаемого&quot;&#10;Опер = &lt;/ Метка &quot;:&quot; /&gt; перем &quot;=&quot; прав.часть&#10;прав.часть = &lt;/&quot;-&quot;/&gt; Часть1 [&quot;+&quot; ! &quot;-&quot;] ... Часть1&#10;Часть1 = Часть2 [&quot;*&quot; ! &quot;/&quot;] ... Часть2&#10;Часть2 = Часть3  [&quot;и&quot; ! &quot;или&quot;] ... Часть3&#10;Часть3 = &lt;/&quot;не&quot;/&gt; Часть4&#10;Часть4 = &lt;/функция ... функция/&gt; Часть5&#10;Часть5 = перем ! цел прав.часть&#10;перем = Б&lt;/Б ! ц ... Б ! ц/&gt;&#10;функция = &quot;sin&quot; ! &quot;cos&quot; ! &quot;tg&quot;&#10;Б = А ! Б ! ... ! Я&#10;ц = 0 ! 1 ! ... ! 7&#10;метка = цел" wrapText="true" />
+                        <Label layoutX="50.0" layoutY="7.0" text="Backus–Naur form">
+                            <font>
+                                <Font size="25.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+        <AnchorPane prefHeight="204.0" prefWidth="600.0">
+            <children>
+                <Label alignment="CENTER" layoutX="250.0" layoutY="-1.0" prefHeight="30.0" prefWidth="100.0" text="OUTPUT">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Button layoutX="18.0" layoutY="159.0" mnemonicParsing="false" onAction="#onStartClicked" prefHeight="17.0" prefWidth="92.0" text="Start">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="exitButton" layoutX="491.0" layoutY="159.0" mnemonicParsing="false" onAction="#onExitClicked" prefHeight="17.0" prefWidth="92.0" text="Exit">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <TextArea fx:id="outputTextArea" editable="false" layoutX="18.0" layoutY="29.0" prefHeight="121.0" prefWidth="565.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
